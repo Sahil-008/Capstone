@@ -2,14 +2,18 @@
                     ↓
               PDF Extraction
                     ↓
+	    (Text extraction
+                    +
+             Table extraction)
+ 		    ↓
               Text Cleaning
                     ↓
         Requirement Detection
                     ↓
        ┌────────────┼────────────┐
-       ↓            ↓            ↓
-    Financial    Document     Technical
-       ↓            ↓            ↓
+       ↓            ↓                    ↓
+    Financial    Document           Technical
+       ↓            ↓                    ↓
        └────────────┼────────────┘
                     ↓
           Information Extraction
