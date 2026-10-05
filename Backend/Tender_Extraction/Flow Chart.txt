@@ -1,0 +1,19 @@
+                TENDER PDF
+                    ↓
+              PDF Extraction
+                    ↓
+              Text Cleaning
+                    ↓
+        Requirement Detection
+                    ↓
+       ┌────────────┼────────────┐
+       ↓            ↓            ↓
+    Financial    Document     Technical
+       ↓            ↓            ↓
+       └────────────┼────────────┘
+                    ↓
+          Information Extraction
+                    ↓
+            Structured JSON
+                    ↓
+          Requirements Database
