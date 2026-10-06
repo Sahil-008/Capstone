@@ -1,23 +1,24 @@
-                TENDER PDF
-                    ↓
-              PDF Extraction
-                    ↓
-	    (Text extraction
-                    +
-             Table extraction)
- 		    ↓
-              Text Cleaning
-                    ↓
-        Requirement Detection
-                    ↓
-       ┌────────────┼────────────┐
-       ↓            ↓                    ↓
-    Financial    Document           Technical
-       ↓            ↓                    ↓
-       └────────────┼────────────┘
-                    ↓
-          Information Extraction
-                    ↓
-            Structured JSON
-                    ↓
-          Requirements Database
+
+                      Tender PDF
+                          ↓
+                   PDF Text Extraction(Text extraction + table Extraction)
+                          ↓
+                    Text Cleaning
+                          ↓
+                  Document Structure
+                 ↙               ↘
+          Has clauses?           No clauses?
+              ↓                        ↓
+        Clause detection        Page/section
+              ↓                        ↓
+              └────────┬─────────┘
+                          ↓
+                 Requirement Detection
+                          ↓
+               Requirement Classification(financial, Document, technical)
+                          ↓
+               Value / Entity Extraction
+                          ↓
+                   Structured JSON
+                          ↓
+                Requirements Database
