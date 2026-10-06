@@ -1,16 +1,20 @@
 from pdf_extractor import extract_text
 from text_cleaner import clean_text
 from pathlib import Path
+from clause_detector import detect_clauses
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 pdf_path = BASE_DIR / "data" / "Tendernotice_3.pdf"
 
 pages = extract_text(pdf_path)
 
-print("Total pages:", len(pages))
 
-for page in pages[:3]:
-    cleaned = clean_text(page["text"])
+for page in pages:
+    text = clean_text(page["text"])
+    clauses = detect_clauses(text)
 
-    print(f"\n--- PAGE {page['page']} ---")
-    print(cleaned)
+    if clauses:
+        print(f"\n--- PAGE {page['page']} ---")
+
+        for clause in clauses:
+            print(clause)
